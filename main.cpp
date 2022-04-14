@@ -35,16 +35,16 @@ bool areaLessThan10(shared_ptr<Shape> s)
 
 void printCollectionElements(const Collection& collection)
 {
-    for(Collection::const_iterator it = collection.begin(); it != collection.end(); ++it)
-        if(*it)
-            (*it)->print();
+    for(const auto & it : collection)
+        if(it)
+            it->print();
 }
 
 void printAreas(const Collection& collection)
 {
-    for(vector<shared_ptr<Shape>>::const_iterator it = collection.begin(); it != collection.end(); ++it)
-        if(*it)
-            cout << (*it)->getArea() << std::endl;
+    for(const auto & it : collection)
+        if(it)
+            cout << it->getArea() << std::endl;
 }
 
 void findFirstShapeMatchingPredicate(const Collection& collection,

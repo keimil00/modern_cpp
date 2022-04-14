@@ -63,6 +63,13 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
     }
 }
 
+enum Colors : unsigned char
+{
+    RED = 10,
+    BLUE,
+    GREEN
+};
+
 int main()
 {
     Collection shapes;

@@ -1,7 +1,11 @@
 #pragma once
 
+
+enum Colors : unsigned char;
+
 class Shape
 {
+    Colors color;
 public:
     virtual ~Shape() {}
 

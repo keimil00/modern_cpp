@@ -7,6 +7,7 @@ class Shape
 {
     Colors color;
 public:
+    Shape() = delete;
     virtual ~Shape() {}
 
     virtual double getArea() const = 0;

@@ -70,8 +70,16 @@ enum Colors : unsigned char
     GREEN
 };
 
+constexpr int fib(int n)
+{
+    if (n <= 1)
+        return n;
+    return fib(n-1) + fib(n-2);
+}
+
 int main()
 {
+    //constexpr auto result = fib(45);  //Too big number of steps for clang and i don't really know how to change that
     Collection shapes;
     shapes.push_back(make_shared<Circle>(2.0));
     shapes.push_back(make_shared<Circle>(3.0));

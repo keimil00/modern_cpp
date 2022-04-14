@@ -5,6 +5,7 @@
 class Square : public Rectangle
 {
 public:
+    Square() = delete;
     Square(double x);
     Square(const Square & other) = default;
 
@@ -14,5 +15,5 @@ public:
 
 private:
     double getY() = delete; // should not have Y dimension
-    Square() = delete;
+
 };

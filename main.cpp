@@ -63,9 +63,9 @@ void findFirstShapeMatchingPredicate(const Collection& collection,
     }
 }
 
-enum Colors : unsigned char
+enum Color : unsigned char
 {
-    RED = 10,
+    RED,
     BLUE,
     GREEN
 };
@@ -79,15 +79,20 @@ constexpr int fib(int n)
 
 int main()
 {
-    //constexpr auto result = fib(45);  //Too big number of steps for clang and i don't really know how to change that
-    Collection shapes;
-    shapes.push_back(make_shared<Circle>(2.0));
-    shapes.push_back(make_shared<Circle>(3.0));
-    shapes.push_back(nullptr);
-    shapes.push_back(make_shared<Circle>(4.0));
-    shapes.push_back(make_shared<Rectangle>(10.0, 5.0));
-    shapes.push_back(make_shared<Square>(3.0));
-    shapes.push_back(make_shared<Circle>(4.0));
+    //constexpr auto result = fib(45);  //Too big number of steps for clang, and I don't really know how to change that
+    Collection shapes = {
+            make_shared<Circle>(2.0),
+            make_shared<Circle>(2.0),
+            nullptr,
+            make_shared<Circle>(4.0),
+            make_shared<Rectangle>(10.0, 5.0),
+            make_shared<Square>(3.0),
+            make_shared<Circle>(4.0),
+            make_shared<Square>(RED)
+    };
+
+
+
     printCollectionElements(shapes);
 
     cout << "Areas before sort: " << std::endl;

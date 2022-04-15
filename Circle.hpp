@@ -6,7 +6,7 @@ class Circle final : public Shape
 {
 public:
     Circle() = delete; // doesn't allow to call default constructor
-    Circle(double r);
+    explicit Circle(Color c, double r = 1);
     Circle(const Circle & other) = default;
 
     double getArea() const;

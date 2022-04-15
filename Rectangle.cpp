@@ -1,12 +1,8 @@
 #include "Rectangle.hpp"
 #include <iostream>
 
-Rectangle::Rectangle(double x, double y)
-    : x_(x),
-      y_(y)
+Rectangle::Rectangle(Color c, double x, double y) : Shape(c), x_(x), y_(y)
 {}
-
-
 
 double Rectangle::getArea() const
 {
@@ -35,3 +31,5 @@ void Rectangle::print() const
               << "          area: " << getArea() << std::endl
               << "     perimeter: " << getPerimeter() << std::endl;
 }
+
+

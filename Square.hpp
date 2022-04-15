@@ -6,7 +6,7 @@ class Square : public Rectangle
 {
 public:
     Square() = delete;
-    Square(double x);
+    explicit Square(Color c, double x = 1);
     Square(const Square & other) = default;
 
     double getArea() const override;

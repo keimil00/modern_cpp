@@ -1,12 +1,14 @@
 #pragma once
 
 
-enum Colors : unsigned char;
+enum Color : unsigned char;
 
 class Shape
 {
-    Colors color;
+    Color color;
 public:
+    Shape() = delete;
+    Shape(Color c);
     virtual ~Shape() {}
 
     virtual double getArea() const = 0;

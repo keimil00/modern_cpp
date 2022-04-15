@@ -2,11 +2,13 @@
 
 #include "Shape.hpp"
 
+enum Color : unsigned char;
+
 class Rectangle : public Shape
 {
 public:
     Rectangle() = delete;
-    Rectangle(double x, double y);
+    explicit Rectangle(Color c, double x = 1, double y = 1);
     Rectangle(const Rectangle & other) = default;
 
     double getArea() const override;
@@ -16,7 +18,6 @@ public:
     void print() const override;
 
 private:
-
 
     double x_;
     double y_;

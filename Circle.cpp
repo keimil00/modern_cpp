@@ -2,10 +2,9 @@
 #include <math.h>
 #include <iostream>
 
-Circle::Circle(double r)
-    : r_(r)
-{}
 
+Circle::Circle(Color c, double r)  : Shape(c), r_(r)
+{}
 
 double Circle::getArea() const
 {
@@ -28,3 +27,5 @@ void Circle::print() const
               << "          area: " << getArea() << std::endl
               << "     perimeter: " << getPerimeter() << std::endl;
 }
+
+

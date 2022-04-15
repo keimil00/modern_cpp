@@ -14,5 +14,5 @@ set(SRC_LIST
 )
 
 add_executable(${PROJECT_NAME} ${SRC_LIST})
-# add_compile_options(${PROJECT_NAME} -Wall -Werror -Wpedantic -Wextra)
+add_compile_options(modern_cpp -Wall -Werror -Wpedantic -Wextra -fconstexpr-depth=50)
 target_compile_options(${PROJECT_NAME} PUBLIC -Wall -Werror -Wpedantic -Wextra)

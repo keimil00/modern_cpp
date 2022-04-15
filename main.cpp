@@ -79,7 +79,9 @@ constexpr int fib(int n)
 
 int main()
 {
-    //constexpr auto result = fib(45);  //Too big number of steps for clang, and I don't really know how to change that
+    //constexpr auto result = fib(45);
+    std::cout << fib(45) << std::endl; //assigning to contexpr variable couses an error of constexpr evaluation
+    // hit maximum step limit; possible infinite loop?
     Collection shapes = {
             make_shared<Circle>(RED, 2.0),
             make_shared<Circle>(GREEN, 2.0),
